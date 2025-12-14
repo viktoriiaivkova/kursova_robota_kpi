@@ -1,0 +1,140 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-width: 4px;
+    --shadow-offset: 6px;
+    --font-stack: 'Courier New', Courier, monospace;
+    --font-stack-bold: Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    padding: 20px;
+    background-image: radial-gradient(#000000 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+h1, h2, h3, .btn {
+    font-family: var(--font-stack-bold);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: var(--border-width) solid var(--text-color);
+    background: var(--bg-color);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-color);
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 2.5rem;
+    border-bottom: var(--border-width) solid var(--text-color);
+    margin-bottom: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.retro-card, .form-card {
+    background: var(--bg-color);
+    border: var(--border-width) solid var(--text-color);
+    padding: 20px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-color);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.retro-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: calc(var(--shadow-offset) - 2px) calc(var(--shadow-offset) - 2px) 0 var(--text-color);
+}
+.card-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-details p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+.form-group-row .form-group {
+    flex: 1;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: var(--border-width) solid var(--text-color);
+    border-radius: 0;
+    font-family: var(--font-stack);
+    font-size: 1rem;
+    outline: none;
+}
+input:focus {
+    background: #f0f0f0;
+}
+.btn {
+    padding: 10px 20px;
+    border: var(--border-width) solid var(--text-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--text-color);
+    transition: all 0.1s;
+}
+.btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--text-color);
+}
+.btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+.btn-primary:hover {
+    background-color: #333;
+}
+.btn-delete {
+    background-color: #ffdddd;
+}
+.hidden {
+    display: none;
+}
+.edit-mode input {
+    margin-bottom: 5px;
+}
