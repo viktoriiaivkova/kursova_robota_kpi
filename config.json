@@ -1,0 +1,7 @@
+{
+  "database_url": "postgresql://lab_user:mypassword@localhost:5432/lab_db",
+  "business_rules": {
+    "max_accounts_per_user": 3,
+    "allow_account_creation": false
+  }
+}
